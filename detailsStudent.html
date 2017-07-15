@@ -37,9 +37,9 @@
             </br>
             <input type="text" class="form-control" name="studentid" placeholder="Student Id" required>
             </br>
-            <input type="text" class="form-control" id="name" placeholder="Student Name" required>
+            <input type="text" class="form-control" name="name" placeholder="Student Name" required>
             </br>
-            <input type="number" class="form-control" id="age" placeholder="Age" required>
+            <input type="number" class="form-control" name="age" placeholder="Age" required>
             </br>
             <div id="input-type" class="row">
                 <div class="col-sm-3 col-md-3">
@@ -47,12 +47,12 @@
                     </div>
                 <div class="col-sm-3 col-md-3">
                     <label class="radio-inline">
-                        <input name="gender" id="gender" value="Male" type="radio" />Male
+                        <input  name="gender" value="Male" type="radio" />Male
                     </label>
                 </div>
                 <div class="col-sm-3 col-md-3">
                     <label class="radio-inline">
-                    <input name="gender" id="gender" value="Female" type="radio" />Female
+                    <input  name="gender" value="Female" type="radio" />Female
                     </label>
                 </div>
             </div>
@@ -63,17 +63,17 @@
             </div>
             <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="status" id="parentalstatus" value="Male" type="radio" />Both
+                    <input  name="parentalstatus" value="Male" type="radio" />Both
                 </label>
             </div>
             <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="status" id="parentalstatus" value="Female" type="radio" />Single
+                    <input  name="parentalstatus" value="Female" type="radio" />Single
                 </label>
             </div>
            <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="status" id="parentalstatus" value="Female" type="radio" />Orphan
+                    <input  name="parentalstatus" value="Female" type="radio" />Orphan
                 </label>
             </div>
             </div>
@@ -84,19 +84,19 @@
                 </div>
                 <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="family" id="type" value="joint" type="radio" />Joint
+                    <input name="family"  value="joint" type="radio" />Joint
                 </label>
                 </div>
                 <div class="col-sm-3 col-md-3">
                     <label class="radio-inline">
-                    <input name="family" id="type" value="Nuclear" type="radio"/>Nuclear
+                    <input name="family"  value="Nuclear" type="radio"/>Nuclear
                     </label>
                 </div>
             </div>
             </br>
             <div class="row">
                 <div class="col-xs-12 col-md-4">
-                 <select class="form-control" id="sibling">
+                 <select class="form-control" name="sibling">
                     <option value="" disabled selected>Siblings</option>
                     <option>One</option>
                     <option>Two</option>
@@ -105,7 +105,7 @@
                 </select>
                 </div>
             <div class="col-xs-12 col-md-4">
-                <select class="form-control" id="birth">
+                <select class="form-control" name="birth">
                     <option value="" disabled selected>Order Of birth</option>
                     <option>First Born</option>
                     <option>Second Born</option>
@@ -113,7 +113,7 @@
                 </select>
             </div>
             <div class="col-xs-12 col-md-4">
-            <select class="form-control" id="peducation">
+            <select class="form-control" name="peducation">
                     <option value="" disabled selected>Parents Education level</option>
                     <option>primary</option>
                     <option>Secondary</option>
@@ -123,7 +123,7 @@
             </div>
         </div>
         </br>
-        <input type="number" class="form-control" id="income" placeholder="Family Income" required>
+        <input type="number" class="form-control" name="income" placeholder="Family Income" required>
           </br>
         <div class="text-center">
         <button type="submit" class="btn btn-success">Submit</button>
