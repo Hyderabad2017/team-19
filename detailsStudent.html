@@ -4,30 +4,30 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         #layout{
             background:#008CBA url("http://zurb.com/playground/uploads/upload/upload/407/stars.svg");
             margin-left: 10%;
-            margin-top:10%;
+            margin-top:5%;
+        }
+        .v  li{
+            margin-left:10px;
         }
       </style>
   </head>
-  <body>
-    <div class="container">
-    <nav>
-    <ul class="nav nav-tabs nav-justified">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
-        </ul>
-    </nav>
-      </div>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav  nav-tabs v">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+  </div>
+</nav>
     <div class="container">
     <div class="row">
     <div class="col-sm-10 col-md-10 col-md-offset-2" id ="layout">
@@ -35,9 +35,11 @@
         <div class="form-group">
             </br>
             </br>
-            <input type="text" class="form-control" id="name" placeholder="Student Name">
+            <input type="text" class="form-control" id="studentid" placeholder="Student Id" required>
             </br>
-            <input type="number" class="form-control" id="age" placeholder="Age">
+            <input type="text" class="form-control" id="name" placeholder="Student Name" required>
+            </br>
+            <input type="number" class="form-control" id="age" placeholder="Age" required>
             </br>
             <div id="input-type" class="row">
                 <div class="col-sm-3 col-md-3">
@@ -45,12 +47,12 @@
                     </div>
                 <div class="col-sm-3 col-md-3">
                     <label class="radio-inline">
-                        <input name="gender" id="gender" value="Male" type="radio" />Male
+                        <input name="gender" id="male" value="Male" type="radio" />Male
                     </label>
                 </div>
                 <div class="col-sm-3 col-md-3">
                     <label class="radio-inline">
-                    <input name="gender" id="gender" value="Female" type="radio" />Female
+                    <input name="gender" id="female" value="Female" type="radio" />Female
                     </label>
                 </div>
             </div>
@@ -61,17 +63,17 @@
             </div>
             <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="status" id="parentalstatus" value="Male" type="radio" />Both
+                    <input name="status" id="parentalstatusb" value="Male" type="radio" />Both
                 </label>
             </div>
             <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="status" id="parentalstatus" value="Female" type="radio" />Single
+                    <input name="status" id="parentalstatuss" value="Female" type="radio" />Single
                 </label>
             </div>
            <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="status" id="parentalstatus" value="Female" type="radio" />Orphan
+                    <input name="status" id="parentalstatuso" value="Female" type="radio" />Orphan
                 </label>
             </div>
             </div>
@@ -82,54 +84,46 @@
                 </div>
                 <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="family" id="type" value="joint" type="radio" />Joint
+                    <input name="family" id="joint" value="joint" type="radio" />Joint
                 </label>
                 </div>
                 <div class="col-sm-3 col-md-3">
                     <label class="radio-inline">
-                    <input name="family" id="type" value="Nuclear" type="radio"          />Nuclear
+                    <input name="family" id="nuclear" value="Nuclear" type="radio"          />Nuclear
                     </label>
                 </div>
             </div>
             </br>
             <div class="row">
                 <div class="col-xs-12 col-md-4">
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Siblings
-                        <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">One</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Two</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Three</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">More than three</a></li>
-                        </ul>
-                    </div>
+                 <select class="form-control" id="birth">
+                    <option value="" disabled selected>Siblings</option>
+                    <option>One</option>
+                    <option>Two</option>
+                    <option>Three</option>
+                    <option>More Than Three</option>
+                </select>
                 </div>
             <div class="col-xs-12 col-md-4">
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="menu2" data-toggle="dropdown">Order of Birth
-                    <span class="caret"></span></button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">First Born</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Second Born</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Later Born</a></li>
-                    </ul>
-                </div>
+                <select class="form-control" id="birth">
+                    <option value="" disabled selected>Order Of birth</option>
+                    <option>First Born</option>
+                    <option>Second Born</option>
+                    <option>Later Born</option>
+                </select>
             </div>
             <div class="col-xs-12 col-md-4">
-            <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu3" data-toggle="dropdown">Parent education level
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Primary</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Secondary</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Higher</a></li>
-            </ul>
-            </div>
+            <select class="form-control" id="peducation">
+                    <option value="" disabled selected>Parents Education level</option>
+                    <option>primary</option>
+                    <option>Secondary</option>
+                    <option>Higher</option>
+                    <option>None</option>
+                </select>
             </div>
         </div>
         </br>
-        <input type="number" class="form-control" id="income" placeholder="Family Income" required>
+        <input type="number" class="form-control" id="age" placeholder="Family Income" required>
           </br>
         <div class="text-center">
         <button type="submit" class="btn btn-success">Submit</button>
@@ -140,6 +134,8 @@
     </div>
 </div>
 </div>
+
+	  <script src="js/app.js"></script>
 </body>
 </html>
   
