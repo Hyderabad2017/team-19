@@ -31,11 +31,11 @@
     <div class="container">
     <div class="row">
     <div class="col-sm-10 col-md-10 col-md-offset-2" id ="layout">
-      <form>
+      <form method="POST" action="phpdb.php">
         <div class="form-group">
             </br>
             </br>
-            <input type="text" class="form-control" id="studentid" placeholder="Student Id" required>
+            <input type="text" class="form-control" name="studentid" placeholder="Student Id" required>
             </br>
             <input type="text" class="form-control" id="name" placeholder="Student Name" required>
             </br>
@@ -47,12 +47,12 @@
                     </div>
                 <div class="col-sm-3 col-md-3">
                     <label class="radio-inline">
-                        <input name="gender" id="male" value="Male" type="radio" />Male
+                        <input name="gender" id="gender" value="Male" type="radio" />Male
                     </label>
                 </div>
                 <div class="col-sm-3 col-md-3">
                     <label class="radio-inline">
-                    <input name="gender" id="female" value="Female" type="radio" />Female
+                    <input name="gender" id="gender" value="Female" type="radio" />Female
                     </label>
                 </div>
             </div>
@@ -63,17 +63,17 @@
             </div>
             <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="status" id="parentalstatusb" value="Male" type="radio" />Both
+                    <input name="status" id="parentalstatus" value="Male" type="radio" />Both
                 </label>
             </div>
             <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="status" id="parentalstatuss" value="Female" type="radio" />Single
+                    <input name="status" id="parentalstatus" value="Female" type="radio" />Single
                 </label>
             </div>
            <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="status" id="parentalstatuso" value="Female" type="radio" />Orphan
+                    <input name="status" id="parentalstatus" value="Female" type="radio" />Orphan
                 </label>
             </div>
             </div>
@@ -84,19 +84,19 @@
                 </div>
                 <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="family" id="joint" value="joint" type="radio" />Joint
+                    <input name="family" id="type" value="joint" type="radio" />Joint
                 </label>
                 </div>
                 <div class="col-sm-3 col-md-3">
                     <label class="radio-inline">
-                    <input name="family" id="nuclear" value="Nuclear" type="radio"          />Nuclear
+                    <input name="family" id="type" value="Nuclear" type="radio"/>Nuclear
                     </label>
                 </div>
             </div>
             </br>
             <div class="row">
                 <div class="col-xs-12 col-md-4">
-                 <select class="form-control" id="birth">
+                 <select class="form-control" id="sibling">
                     <option value="" disabled selected>Siblings</option>
                     <option>One</option>
                     <option>Two</option>
@@ -123,7 +123,7 @@
             </div>
         </div>
         </br>
-        <input type="number" class="form-control" id="age" placeholder="Family Income" required>
+        <input type="number" class="form-control" id="income" placeholder="Family Income" required>
           </br>
         <div class="text-center">
         <button type="submit" class="btn btn-success">Submit</button>
