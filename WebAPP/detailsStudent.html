@@ -32,15 +32,14 @@
     <div class="row">
     <div class="col-sm-10 col-md-10 col-md-offset-2" id ="layout">
       <form method="POST" action="phpdb.php">
-	  
         <div class="form-group">
             </br>
             </br>
             <input type="text" class="form-control" name="studentid" placeholder="Student Id" required>
             </br>
-            <input type="text" class="form-control" id="name" placeholder="Student Name" required>
+            <input type="text" class="form-control" name="name" placeholder="Student Name" required>
             </br>
-            <input type="number" class="form-control" id="age" placeholder="Age" required>
+            <input type="number" class="form-control" name="age" placeholder="Age" required>
             </br>
             <div id="input-type" class="row">
                 <div class="col-sm-3 col-md-3">
@@ -48,12 +47,12 @@
                     </div>
                 <div class="col-sm-3 col-md-3">
                     <label class="radio-inline">
-                        <input name="gender" id="gender" value="Male" type="radio" />Male
+                        <input  name="gender" value="Male" type="radio" />Male
                     </label>
                 </div>
                 <div class="col-sm-3 col-md-3">
                     <label class="radio-inline">
-                    <input name="gender" id="gender" value="Female" type="radio" />Female
+                    <input  name="gender" value="Female" type="radio" />Female
                     </label>
                 </div>
             </div>
@@ -64,17 +63,17 @@
             </div>
             <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="status" id="parentalstatus" value="Male" type="radio" />Both
+                    <input  name="parentalstatus" value="Male" type="radio" />Both
                 </label>
             </div>
             <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="status" id="parentalstatus" value="Female" type="radio" />Single
+                    <input  name="parentalstatus" value="Female" type="radio" />Single
                 </label>
             </div>
            <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="status" id="parentalstatus" value="Female" type="radio" />Orphan
+                    <input  name="parentalstatus" value="Female" type="radio" />Orphan
                 </label>
             </div>
             </div>
@@ -85,54 +84,46 @@
                 </div>
                 <div class="col-sm-3 col-md-3">
                 <label class="radio-inline">
-                    <input name="family" id="type" value="joint" type="radio" />Joint
+                    <input name="family"  value="joint" type="radio" />Joint
                 </label>
                 </div>
                 <div class="col-sm-3 col-md-3">
                     <label class="radio-inline">
-                    <input name="family" id="type" value="Nuclear" type="radio"          />Nuclear
+                    <input name="family"  value="Nuclear" type="radio"/>Nuclear
                     </label>
                 </div>
             </div>
             </br>
             <div class="row">
                 <div class="col-xs-12 col-md-4">
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Siblings
-                        <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">One</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Two</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Three</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">More than three</a></li>
-                        </ul>
-                    </div>
+                 <select class="form-control" name="sibling">
+                    <option value="" disabled selected>Siblings</option>
+                    <option>One</option>
+                    <option>Two</option>
+                    <option>Three</option>
+                    <option>More Than Three</option>
+                </select>
                 </div>
             <div class="col-xs-12 col-md-4">
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="menu2" data-toggle="dropdown">Order of Birth
-                    <span class="caret"></span></button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">First Born</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Second Born</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Later Born</a></li>
-                    </ul>
-                </div>
+                <select class="form-control" name="birth">
+                    <option value="" disabled selected>Order Of birth</option>
+                    <option>First Born</option>
+                    <option>Second Born</option>
+                    <option>Later Born</option>
+                </select>
             </div>
             <div class="col-xs-12 col-md-4">
-            <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu3" data-toggle="dropdown">Parent education level
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Primary</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Secondary</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Higher</a></li>
-            </ul>
-            </div>
+            <select class="form-control" name="peducation">
+                    <option value="" disabled selected>Parents Education level</option>
+                    <option>primary</option>
+                    <option>Secondary</option>
+                    <option>Higher</option>
+                    <option>None</option>
+                </select>
             </div>
         </div>
         </br>
-        <input type="number" class="form-control" id="income" placeholder="Family Income" required>
+        <input type="number" class="form-control" name="income" placeholder="Family Income" required>
           </br>
         <div class="text-center">
         <button type="submit" class="btn btn-success">Submit</button>
